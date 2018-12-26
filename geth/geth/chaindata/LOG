@@ -248,3 +248,13 @@
 11:39:04.072830 version@stat F·[2 4] S·9MiB[2MiB 7MiB] Sc·[0.50 0.07]
 11:39:04.078814 db@janitor F·8 G·0
 11:39:04.078814 db@open done T·20.9441ms
+=============== Dec 26, 2018 (CST) ===============
+12:01:57.451158 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:01:57.451158 version@stat F·[2 4] S·9MiB[2MiB 7MiB] Sc·[0.50 0.07]
+12:01:57.451158 db@open opening
+12:01:57.451158 journal@recovery F·1
+12:01:57.452155 journal@recovery recovering @70
+12:01:57.462466 memdb@flush created L0@72 N·2 S·245B "Blo..ion,v138371":"Las..der,v138372"
+12:01:57.469040 version@stat F·[3 4] S·9MiB[2MiB 7MiB] Sc·[0.75 0.07]
+12:01:57.476090 db@janitor F·9 G·0
+12:01:57.476090 db@open done T·24.9321ms
