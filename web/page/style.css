@@ -1,0 +1,119 @@
+/*
+* Homework 9 - Signup
+* signup.css
+* Name: wuzht
+* Start date: 2017-11-30
+* Last edit date: 2017-12-2
+*/
+
+body {
+    background: #fafafa;
+    color: #125688;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.column-box {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#signup-box {
+    background-color: white;
+    border: 1px solid #edeeee;
+    border-radius: 3px;
+    padding: 10px 0;
+    text-align: center;
+    /* width: 340px; */
+    width: 1020px;
+    margin: 30px auto;
+}
+
+.btns {
+    display: inline-block;
+}
+
+.text-input {
+    outline: none;
+    width: 90%;
+    border: none;
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 0;
+    padding: 5px 0 5px 0;
+    background: transparent;
+    border-bottom: 1px solid #4c5c72;
+    transition: 0.1s;
+}
+
+.text-input:focus {
+    border-bottom: 2px solid #26A69A;
+}
+
+.text-input-box {
+    height: 35px;
+}
+
+.tx-box {
+    height: 150px !important;
+}
+
+.simple-box {
+    height: 80px !important;
+}
+
+.op-box {
+    padding-top: 10px;
+    margin: 10px;
+    height: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+}
+
+
+#despcription {
+    text-align: left;
+    padding-left: 15px;
+    /* word-wrap: break-word; */
+    margin: 10px;
+}
+
+.error-info {
+    padding-left: 5px;
+    word-wrap: break-word;
+    width: 80%;
+    margin: 10px;
+    margin-bottom: 0;
+    margin-right: 0;
+    text-align: left;
+    font-size: 10pt;
+}
+
+#dropdown {
+    width: 45% !important;
+    margin: 10px !important;
+}
+
+.btn, #dropdown {
+    margin-top: 5px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    font-size: 12pt;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #4090db;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background-color: #2d6599;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ether Sunflowers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+    <link rel="icon" sizes="196x196" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="signup-box">
+        <span><img src="assets/favicon.png" style="height:120px;"></span> 
+        <h1 style="margin-top: 0;">Ether Sunflowers</h1>
+        <p>Welcome to Ether Sunflowers!</p>
+        
+
+        <div>
+            <form>
+                <span>Current account: </span>
+                <select name="account" id="dropdown">
+                </select>
+            </form>
+        </div>
+        
+        
+        <div class="column-box">
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getMyBalance" id="getMyBalance">
+                <div class="error-info" id="error-getMyBalance"></div>  
+            </div>
+
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getContractBalance" id="getContractBalance">
+                <div class="error-info" id="error-getContractBalance"></div>  
+            </div>
+
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getSunsBalance" id="getSunsBalance">
+                <div class="error-info" id="error-getSunsBalance"></div>  
+            </div>
+
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getSunflowersNum" id="getSunflowersNum">
+                <div class="error-info" id="error-getSunflowersNum"></div>  
+            </div>
+
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getSuccessAmount" id="getSuccessAmount">
+                <div class="error-info" id="error-getSuccessAmount"></div>  
+            </div>
+
+            <div class="op-box simple-box">
+                <input class="btn simple-get-btn" type="submit" value="getFailAmount" id="getFailAmount">
+                <div class="error-info" id="error-getFailAmount"></div>  
+            </div>
+        </div>
+
+        <div class="column-box">
+            <div class="op-box">
+                <input class="btn" type="submit" value="getFreeSuns" id="getFreeSuns">
+                <div class="error-info" id="error-getFreeSuns"></div>  
+            </div>
+
+            <div class="op-box tx-box", style="height: 150px;">
+                <div class="text-input-box"><input id="getSunflowersBySuns-input" class="text-input" type="text" name="getSunflowersBySuns-input" placeholder="sunflowerNum, 10 sun = 1 sunflower" value=""></div>
+                <input class="btn" type="submit" value="getSunflowersBySuns" id="getSunflowersBySuns">
+                <div class="error-info" id="error-getSunflowersBySuns"></div>  
+            </div>
+
+            <div class="op-box">
+                <input class="btn" type="submit" value="work" id="work">
+                <div class="error-info" id="error-work"></div>  
+            </div>
+
+            <div class="op-box">
+                <input class="btn" type="submit" value="quit" id="quit">
+                <div class="error-info" id="error-quit"></div>  
+            </div>
+
+            <div class="op-box">
+                <input class="btn" type="submit" value="rest" id="rest">
+                <div class="error-info" id="error-rest"></div>  
+            </div>
+        </div>
+
+        <div class="column-box">
+            <div class="op-box tx-box", style="height: 150px;">
+                <div class="text-input-box"><input id="buySuns-input" class="text-input" type="text" name="buySuns-input" placeholder="buySuns value in ether" value=""></div>
+                <input class="btn" type="submit" value="buySuns" id="buySuns">
+                <div class="error-info" id="error-buySuns"></div>  
+            </div>
+
+            <div class="op-box">
+                <input class="btn" type="submit" value="sellSuns" id="sellSuns">
+                <div class="error-info" id="error-sellSuns"></div>  
+            </div>
+
+            <div class="op-box tx-box">
+                <div class="text-input-box"><input id="donate-input" class="text-input" type="text" name="donate-input" placeholder="donate value in ether" value=""></div>
+                <input class="btn" type="submit" value="donate" id="donate">
+                <div class="error-info" id="error-donate"></div>  
+            </div>
+        </div>
+
+        <div id="despcription">
+            <h2>Instructions:</h2>
+            <p>1. Please choose your account first.</p>
+            <p>2. Make sure you have enough suns</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;When you don't have any suns, you can click "getFreeSuns" to get 10 suns, which you can check it out by getSunsBalance.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;You can buy suns with your ether. (1 ether can buy 1 sun)</p>
+            <p>3. Click getSunflowersBySuns, 1 sunflower requires 10 suns.</p>
+            <p>4. Now you have sunflowers, click "work", you will get 20*(sunflowersNum) suns, and the sunflowers are gone.</p>
+            <p>5. If you quit, then failAmount++. If you rest, then successAmount++.</p>
+            <p>6. You can sell all your suns by clicking "sellSuns" if the contract have enough ether.</p>
+            <p>You can donate to the contract. Have fun!</p>
+        </div>
+    </div>
+</body>
+</html>
