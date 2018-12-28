@@ -75,7 +75,7 @@ function handlePage(req, res, pathname) {
 function handleAjax(req, res) {
     var urlQuery = url.parse(req.url).query;
     var functionName = querystring.parse(urlQuery).functionName;
-    if (functionName == "getAccountsNum") {
+    if (functionName == "getAccounts") {
         sendMessage(res, web3.eth.accounts.toString());
         return;
     }
@@ -344,7 +344,6 @@ function handleAjax(req, res) {
                 myEvent.stopWatching();
             });
         });
-        
     }
     else if (functionName == "sellSuns") {
         ethersunflowersContract.sellSuns.sendTransaction({from:from}, function(error, txhash){
@@ -427,139 +426,3 @@ function sendMessage(res, msg) {
     });
     res.end("" + msg);
 }
-
-
-
-
-
-
-
-
-// function getFreeSuns(from) {
-//     ethersunflowersContract.getFreeSuns.sendTransaction({from:from}, function(error, txhash) {
-//         if (!error) {
-//             console.log("getFreeSuns txhash: " + txhash);
-//         } else {
-//             console.log("getFreeSuns error: " + error);
-//         }
-        
-//         var myEvent = ethersunflowersContract.FunctionEndEvent();
-//         myEvent.watch(function(err, result) {
-//             if (!err) {
-//                 if (result.transactionHash == txhash) {
-//                     getSunsBalance(from);
-//                 } else {
-//                     console.log("FunctionEndEvent end with errors");
-//                 }
-//             } else {
-//                 console.log("myEvent error: " + err);
-//             }
-//             myEvent.stopWatching();
-//         });
-//     });
-// }
-
-// function getTotalSunsNum(from) {
-//     ethersunflowersContract.getTotalSunsNum.call({from:from}, function(error, result) {
-//         if (!error) {
-//             console.log("getTotalSunsNum result: " + result);
-//         } else {
-//             console.log("getTotalSunsNum error: " + error);
-//         }
-//     });
-// }
-
-// function getSunsBalance(from) {
-//     ethersunflowersContract.getSunsBalance.call({from:from}, function(error, result) {
-//         if (!error) {
-//             console.log("getSunsBalance result: " + result);
-//             return result;
-//         } else {
-//             console.log("getSunsBalance error: " + error);
-//             return error;
-//         }
-//     });
-// }
-
-// function sellSuns(from) {
-//     ethersunflowersContract.sellSuns.sendTransaction({from:from}, function(error, txhash) {
-//         if (!error) {
-//             console.log("sellSuns txhash: " + txhash);
-//         } else {
-//             console.log("sellSuns error: " + error);
-//         }
-
-//         var myEvent = ethersunflowersContract.FunctionEndEvent();
-//         myEvent.watch(function(err, result) {
-//             if (!err) {
-//                 if (result.transactionHash == txhash) {
-//                     getSunsBalance(from);
-//                 }
-//             } else {
-//                 console.log("myEvent error: " + err);
-//             }
-//             myEvent.stopWatching();
-//         });
-//     });
-// }
-
-// function buySuns(from, value) {
-//     ethersunflowersContract.buySuns.sendTransaction({from:from, value:value}, function(error, txhash) {
-//         if (!error) {
-//             console.log("buySuns txhash: " + txhash);
-//         } else {
-//             console.log("buySuns error: " + error);
-//         }
-
-//         var myEvent = ethersunflowersContract.FunctionEndEvent();
-//         myEvent.watch(function(err, result) {
-//             if (!err) {
-//                 if (result.transactionHash == txhash) {
-//                     getSunsBalance(from);
-//                 }
-//             } else {
-//                 console.log("myEvent error: " + err);
-//             }
-//             myEvent.stopWatching();
-//         });
-//     });
-// }
-
-// function getContractBalance(from) {
-//     ethersunflowersContract.getContractBalance.call({from:from}, function(error, result){
-//         if (!error) {
-//             console.log("getContractBalance result: " + result);
-//         } else {
-//             console.log("getContractBalance error: " + error);
-//         }
-//     });
-// }
-
-// // donate to the contract
-// function donate(from, value) {
-//     ethersunflowersContract.donate.sendTransaction({from:from, value:value}, function(error, txhash){
-//         if (!error) {
-//             console.log("donate txhash: " + txhash);
-//         } else {
-//             console.log("donate error: " + error);
-//         }  
-
-//         var myEvent = ethersunflowersContract.FunctionEndEvent();
-//         myEvent.watch(function(err, result) {
-//             if (!err) {
-//                 if (result.transactionHash == txhash) {
-//                     getContractBalance(from);
-//                 }
-//             } else {
-//                 console.log("myEvent error: " + err);
-//             }
-//             myEvent.stopWatching();
-//         });
-
-//     });
-// }
-
-
-// var account = web3.eth.accounts[1];
-// console.log("account: " + account);
-// console.log("account balance: " + web3.eth.getBalance(account));

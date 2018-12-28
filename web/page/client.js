@@ -26,14 +26,6 @@ $(function() {
 			$("#error-getSunsBalance").html(data);
 		});
 	});
-
-	$("#getFreeSuns").click(function() {
-		$("#error-getFreeSuns").html("...");
-		var request = $.get("http://localhost:8000?functionName=getFreeSuns&from=" + from, function(data) {
-			console.log(data);
-			$("#error-getFreeSuns").html(data);
-		});
-	});
 	
 	$("#getSunflowersNum").click(function() {
 		$("#error-getSunflowersNum").html("...");
@@ -61,6 +53,15 @@ $(function() {
 	/********************************** end block 1 ********************************************/
 
 	/********************************** block 2 ********************************************/
+	$("#getFreeSuns").click(function() {
+		$("#error-getFreeSuns").html("...");
+		var request = $.get("http://localhost:8000?functionName=getFreeSuns&from=" + from, function(data) {
+			console.log(data);
+			$("#error-getFreeSuns").html(data);
+			$("#getSunsBalance").click();
+		});
+	});
+
 	$("#getSunflowersBySuns-input").blur(function() {
 		if (!isValueValid($(this).val())) {
 			$("#error-getSunflowersBySuns").css("color", "red");
@@ -86,6 +87,8 @@ $(function() {
 		var request = $.get(url, function(data) {
 			console.log(data);
 			$("#error-getSunflowersBySuns").html(data);
+			$("#getSunsBalance").click();
+			$("#getSunflowersNum").click();
 		});
 	});
 
@@ -94,6 +97,8 @@ $(function() {
 		var request = $.get("http://localhost:8000?functionName=work&from=" + from, function(data) {
 			console.log(data);
 			$("#error-work").html(data);
+			$("#getSunsBalance").click();
+			$("#getSunflowersNum").click();
 		});
 	});
 
@@ -102,6 +107,8 @@ $(function() {
 		var request = $.get("http://localhost:8000?functionName=quit&from=" + from, function(data) {
 			console.log(data);
 			$("#error-quit").html(data);
+			$("#getSunsBalance").click();
+			$("#getFailAmount").click();
 		});
 	});
 
@@ -110,11 +117,9 @@ $(function() {
 		var request = $.get("http://localhost:8000?functionName=rest&from=" + from, function(data) {
 			console.log(data);
 			$("#error-rest").html(data);
+			$("#getSuccessAmount").click();
 		});
 	});
-
-	
-
 
 	/********************************** end block 2 ********************************************/
 
@@ -144,6 +149,9 @@ $(function() {
 		var request = $.get(url, function(data) {
 			console.log(data);
 			$("#error-buySuns").html(data);
+			$("#getMyBalance").click();
+			$("#getContractBalance").click();
+			$("#getSunsBalance").click();
 		});
 	});
 
@@ -152,6 +160,9 @@ $(function() {
 		var request = $.get("http://localhost:8000?functionName=sellSuns&from=" + from, function(data) {
 			console.log(data);
 			$("#error-sellSuns").html(data);
+			$("#getMyBalance").click();
+			$("#getContractBalance").click();
+			$("#getSunsBalance").click();
 		});
 	});
 
@@ -180,11 +191,11 @@ $(function() {
 		var request = $.get(url, function(data) {
 			console.log(data);
 			$("#error-donate").html(data);
+			$("#getMyBalance").click();
+			$("#getContractBalance").click();
 		});
 	});
 	/********************************** end block 3 ********************************************/
-
-
 
 	createDropdown();
 	refreshPage();
@@ -198,12 +209,14 @@ function isValueValid(value) {
 }
 
 function refreshPage() {
+	$(".text-input").val("");
+	$(".error-info").html("");
 	$(".simple-get-btn").click();
 }
 
 function createDropdown() {
-	var request = $.get("http://localhost:8000?functionName=getAccountsNum", function(data) {
-		console.log("getAccountsNum", data);
+	var request = $.get("http://localhost:8000?functionName=getAccounts", function(data) {
+		console.log("getAccounts", data);
 		accounts = data.split(",");
 
 		for (var i = 0; i < accounts.length; ++i) {

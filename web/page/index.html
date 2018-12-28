@@ -10,12 +10,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="signup-box">
+    <div id="main-box">
         <span><img src="assets/favicon.png" style="height:120px;"></span> 
         <h1 style="margin-top: 0;">Ether Sunflowers</h1>
         <p>Welcome to Ether Sunflowers!</p>
         
-
         <div>
             <form>
                 <span>Current account: </span>
@@ -23,7 +22,6 @@
                 </select>
             </form>
         </div>
-        
         
         <div class="column-box">
             <div class="op-box simple-box">
@@ -87,7 +85,7 @@
 
         <div class="column-box">
             <div class="op-box tx-box", style="height: 150px;">
-                <div class="text-input-box"><input id="buySuns-input" class="text-input" type="text" name="buySuns-input" placeholder="buySuns value in ether" value=""></div>
+                <div class="text-input-box"><input id="buySuns-input" class="text-input" type="text" name="buySuns-input" placeholder="buySuns value in ETH" value=""></div>
                 <input class="btn" type="submit" value="buySuns" id="buySuns">
                 <div class="error-info" id="error-buySuns"></div>  
             </div>
@@ -97,8 +95,8 @@
                 <div class="error-info" id="error-sellSuns"></div>  
             </div>
 
-            <div class="op-box tx-box">
-                <div class="text-input-box"><input id="donate-input" class="text-input" type="text" name="donate-input" placeholder="donate value in ether" value=""></div>
+            <div class="op-box tx-box" style="height: 160px !important;">
+                <div class="text-input-box"><input id="donate-input" class="text-input" type="text" name="donate-input" placeholder="donate value in ETH" value=""></div>
                 <input class="btn" type="submit" value="donate" id="donate">
                 <div class="error-info" id="error-donate"></div>  
             </div>
@@ -109,11 +107,11 @@
             <p>1. Please choose your account first.</p>
             <p>2. Make sure you have enough suns</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;When you don't have any suns, you can click "getFreeSuns" to get 10 suns, which you can check it out by getSunsBalance.</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;You can buy suns with your ether. (1 ether can buy 1 sun)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;You can buy suns with your ETH. (1 ETH can buy 1 sun)</p>
             <p>3. Click getSunflowersBySuns, 1 sunflower requires 10 suns.</p>
             <p>4. Now you have sunflowers, click "work", you will get 20*(sunflowersNum) suns, and the sunflowers are gone.</p>
             <p>5. If you quit, then failAmount++. If you rest, then successAmount++.</p>
-            <p>6. You can sell all your suns by clicking "sellSuns" if the contract have enough ether.</p>
+            <p>6. You can sell all your suns by clicking "sellSuns" if the contract have enough ETH.</p>
             <p>You can donate to the contract. Have fun!</p>
         </div>
     </div>
