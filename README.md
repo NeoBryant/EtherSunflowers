@@ -285,15 +285,18 @@ else if (functionName == "buySuns") {
 
 web客户端程序的相关代码位于`./web/page`目录下。
 
-当用户点击按钮时，向服务端发送异步请求，在请求url中传入`from`和`value`等参数。服务端收到客户端的请求，然后处理合约的函数调用，当区块链确认交易后，服务端将结果返回给客户端，并在用户界面上显示。
+当用户点击按钮时，向服务端发送异步请求，在请求url中传入`from`和`value`等参数。服务端收到客户端的请求，然后处理合约的函数调用，当区块链确认交易后，服务端将结果返回给客户端，在用户界面上显示，并且更新左栏相关的信息。
 
 如用户点击购买sun的按钮：
 
 ```javascript
-var url = "http://localhost:8000?functionName=buySuns&from=" + from + "&value=" + value;
-var request = $.get(url, function(data) {
+var url = "http://localhost:8000?functionName=buySuns&from=" + from + "&value=" + value;	// 请求的url，包含函数类型，以及from和value的值
+var request = $.get(url, function(data) {	// 向服务端发送get请求
 	console.log(data);
-	$("#error-buySuns").html(data);
+	$("#error-buySuns").html(data);		// 在按钮下方显示信息
+	$("#getMyBalance").click();			// 刷新信息
+	$("#getContractBalance").click();	// 刷新信息
+	$("#getSunsBalance").click();		// 刷新信息
 });
 ```
 
