@@ -1,6 +1,8 @@
 # Ether Sunflowers
 
 > An Ethereum DApp, Ether Sunflowers
+>
+> github地址：https://github.com/wuzht/EtherSunflowers
 
 <!-- TOC -->
 
@@ -319,7 +321,9 @@ var request = $.get(url, function(data) {
 
 ## 使用说明与测试
 
-使用前，请在github上把整个项目`clone`到本地，并且不要删除任何文件。
+**使用前，请在github上把整个项目`clone`到本地，并且不要删除任何文件。**
+
+github地址：https://github.com/wuzht/EtherSunflowers
 
 文件结构：
 
