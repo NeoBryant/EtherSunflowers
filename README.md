@@ -2,37 +2,37 @@
 
 > An Ethereum DApp, Ether Sunflowers
 
+<!-- TOC -->
 
+- [Ether Sunflowers](#ether-sunflowers)
+    - [选题背景与依据](#选题背景与依据)
+    - [项目描述](#项目描述)
+    - [实现步骤](#实现步骤)
+        - [用Remix编写并部署智能合约](#用remix编写并部署智能合约)
+        - [用web3 API编写node.js服务端程序](#用web3-api编写nodejs服务端程序)
+        - [编写web客户端程序](#编写web客户端程序)
+    - [用户界面](#用户界面)
+        - [整体界面](#整体界面)
+        - [页面布局](#页面布局)
+    - [使用说明与测试](#使用说明与测试)
+        - [测试环境描述](#测试环境描述)
+        - [启动geth](#启动geth)
+        - [启动web服务器](#启动web服务器)
+        - [打开web客户端网页](#打开web客户端网页)
+        - [通过web客户端网页与合约进行交互](#通过web客户端网页与合约进行交互)
+            - [选择账号](#选择账号)
+            - [左边栏](#左边栏)
+            - [中间栏和右边栏](#中间栏和右边栏)
+            - [getFreeSuns](#getfreesuns)
+            - [getSunflowersBySuns](#getsunflowersbysuns)
+            - [work](#work)
+            - [quit](#quit)
+            - [rest](#rest)
+            - [buySuns](#buysuns)
+            - [sellSuns](#sellsuns)
+            - [donate](#donate)
 
-- [Ether Sunflowers](#ether-sunflowers)   
-   - [选题背景与依据](#选题背景与依据)   
-   - [项目描述](#项目描述)   
-   - [实现步骤](#实现步骤)       
-      - [用Remix编写并部署智能合约](#用remix编写并部署智能合约)       
-      - [用web3 API编写node.js服务端程序](#用web3-api编写nodejs服务端程序)        
-      - [编写web客户端程序](#编写web客户端程序)    
-   - [用户界面](#用户界面)        
-      - [整体界面](#整体界面)       
-      - [页面布局](#页面布局)
-   - [使用说明与测试](#使用说明与测试)        
-      - [测试环境描述](#测试环境描述)        
-      - [启动geth](#启动geth)        
-      - [启动web服务器](#启动web服务器)        
-      - [打开web客户端网页](#打开web客户端网页)       
-      - [通过web客户端网页与合约进行交互](#通过web客户端网页与合约进行交互) 
-         - [选择账号](#选择账号)            
-         - [左边栏](#左边栏)            
-         - [中间栏和右边栏](#中间栏和右边栏)            
-         - [getFreeSuns](#getfreesuns)            
-         - [getSunflowersBySuns](#getsunflowersbysuns)           
-         - [work](#work)            
-         - [quit](#quit)            
-         - [rest](#rest)           
-         - [buySuns](#buysuns)            
-         - [sellSuns](#sellsuns)            
-         - [donate](#donate)
-
-
+<!-- /TOC -->
 
 ## 选题背景与依据
 
