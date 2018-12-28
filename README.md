@@ -2,9 +2,42 @@
 
 > An Ethereum DApp, Ether Sunflowers
 
-[TOC]
 
-<!-- TOC -->autoauto- [Ether Sunflowers](#ether-sunflowers)auto    - [选题背景与依据](#选题背景与依据)auto    - [项目描述](#项目描述)auto    - [实现步骤](#实现步骤)auto        - [用Remix编写并部署智能合约](#用remix编写并部署智能合约)auto        - [用web3 API编写node.js服务端程序](#用web3-api编写nodejs服务端程序)auto        - [编写web客户端程序](#编写web客户端程序)auto    - [用户界面](#用户界面)auto        - [整体界面](#整体界面)auto        - [页面布局](#页面布局)auto    - [使用说明与测试](#使用说明与测试)auto        - [测试环境描述](#测试环境描述)auto        - [启动geth](#启动geth)auto        - [启动web服务器](#启动web服务器)auto        - [打开web客户端网页](#打开web客户端网页)auto        - [通过web客户端网页与合约进行交互](#通过web客户端网页与合约进行交互)auto            - [选择账号](#选择账号)auto            - [左边栏](#左边栏)auto            - [中间栏和右边栏](#中间栏和右边栏)auto            - [getFreeSuns](#getfreesuns)auto            - [getSunflowersBySuns](#getsunflowersbysuns)auto            - [work](#work)auto            - [quit](#quit)auto            - [rest](#rest)auto            - [buySuns](#buysuns)auto            - [sellSuns](#sellsuns)auto            - [donate](#donate)autoauto<!-- /TOC -->
+
+- [Ether Sunflowers](#ether-sunflowers)   
+   - [选题背景与依据](#选题背景与依据)   
+   - [项目描述](#项目描述)   
+   - [实现步骤](#实现步骤)       
+
+      - [用Remix编写并部署智能合约](#用remix编写并部署智能合约)       
+
+      - [用web3 API编写node.js服务端程序](#用web3-api编写nodejs服务端程序)        
+
+      - [编写web客户端程序](#编写web客户端程序)    
+   - [用户界面](#用户界面)        
+
+      - [整体界面](#整体界面)       
+
+      - [页面布局](#页面布局)
+   - [使用说明与测试](#使用说明与测试)        
+      - [测试环境描述](#测试环境描述)        
+      - [启动geth](#启动geth)        
+      - [启动web服务器](#启动web服务器)        
+      - [打开web客户端网页](#打开web客户端网页)       
+      - [通过web客户端网页与合约进行交互](#通过web客户端网页与合约进行交互)            
+         - [选择账号](#选择账号)            
+         - [左边栏](#左边栏)            
+         - [中间栏和右边栏](#中间栏和右边栏)            
+         - [getFreeSuns](#getfreesuns)            
+         - [getSunflowersBySuns](#getsunflowersbysuns)           
+         - [work](#work)            
+         - [quit](#quit)            
+         - [rest](#rest)           
+         - [buySuns](#buysuns)            
+         - [sellSuns](#sellsuns)            
+         - [donate](#donate)
+
+
 
 ## 选题背景与依据
 
